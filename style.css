@@ -1,0 +1,170 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Background image */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.5; /* Lower opacity for readability */
+  z-index: -1; /* Send it to the back */
+}
+
+/* Start screen */
+#start-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay for better readability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Menu styles */
+#menu {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 20px 40px;
+  font-size: 24px;
+  cursor: pointer;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: darkred;
+}
+
+/* Game screen */
+#game-screen {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: black;
+}
+
+/* Maze container */
+#maze {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 60px; /* Add space for the game info */
+}
+
+/* Cursor light effect */
+#cursor-light {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 0.05s linear;
+}
+
+/* Player dot */
+#player {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  transition: all 0.05s linear;
+}
+
+/* Game info container */
+#game-info-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Ensure it's on top of the maze */
+}
+
+/* Game info (lives and timer) */
+#game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* Lives */
+#lives {
+  font-size: 35px; /* Bigger hearts */
+  color: red;
+}
+
+/* Timer */
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.enemy {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: yellow;
+  border-radius: 50%;
+  transition: all 0.1s linear;
+  opacity: 0; /* Initially invisible */
+}
+
+/* Maze walls */
+.wall {
+  position: absolute;
+  background: black;
+}
+
+/* Jump scare */
+#jumpscare {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1000;
+}

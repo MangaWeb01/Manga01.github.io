@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Sign</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Main styles -->
+    <link rel="stylesheet" href="second.css"> <!-- Second page styles -->
+</head>
+<body>
+    <div class="main-container">
+        <div class="container-wrapper">
+            <div class="image-container">
+                <img src="second.jpg" alt="Second Image" class="side-image">
+            </div>
+            <div class="container">
+                <h1>Ano ang gusto mong call sign?</h1>
+                <form id="call-sign-form">
+                    <div>
+                        <label>
+                            <input type="radio" name="callSign" value="bebelabs"> Bebelabs
+                        </label><br>
+                        <label>
+                            <input type="radio" name="callSign" value="LaLaBsKoh#18"> LaLaBsKoh#18
+                        </label><br>
+                        <label>
+                            <input type="radio" name="callSign" value="mahal"> Mahal
+                        </label><br>
+                        <label>
+                            <input type="radio" name="callSign" value="love"> Love
+                        </label><br>
+                        <label>
+                            <input type="radio" name="callSign" value="bebeboi/bebegurl"> Bebeboi/Bebegurl
+                        </label>
+                    </div>
+                    <input type="text" placeholder="Ikaw ano gusto mo?" id="custom-call-sign">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <audio id="background-music" autoplay loop>
+        <source src="paligoy.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="second.js"></script>
+</body>
+</html>

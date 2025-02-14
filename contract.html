@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Contract</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Main styles -->
+    
+    <link rel="stylesheet" href="contract.css"> <!-- Contract page styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="contract-wrapper">
+        
+        <div class="form-container">
+            <h1 class="contract-title">Marriage Contract</h1>
+            <h1 class="not-a-contract">Not A Marriage Contract</h1>
+            <form id="marriage-contract-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" required>
+
+                <label for="middle-name">Middle Name:</label>
+                <input type="text" id="middle-name" required>
+
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="place-of-birth">Place of Birth:</label>
+                <input type="text" id="place-of-birth" required>
+
+                <label for="civil-status">Civil Status:</label>
+                <input type="text" id="civil-status" value="Para kay Kape" readonly>
+
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" required>
+
+               
+            </form>
+        </div>
+        <div class="requirements-container">
+            <h2>Requirements:</h2>
+            <ul>
+                <li>Valid ID</li>
+                <li>Birth Certificate Original</li>
+                <li>Barangay ID</li>
+                <li>School ID</li>
+                <li>Voter's ID</li>
+                <li>SSS ID</li>
+                <li>Malilim na boses</li>
+                <li>Mommi boses</li>
+                <li>Pipiliin ako kahit anong mangyari</li>
+                <li>Maganda</li>
+                <li>Cute</li>
+                <li>Smg main/sg</li>
+                <li>Ket ano main basta nagbubuhat</li>
+                <li>Naka iPhone</li>
+                <li>Report card</li>
+                <li>Address</li>
+                <li>Parents name</li>
+                <li>Any gender basta babae at female</li>
+                <li>Walang bbf</li>
+                <li>Kumakanta pag di naka MVP</li>
+                <li>Cellphone number</li>
+                <li>Ako lang dapat i duo (wala ng iba)</li>
+                <li>Kailangan mag paalam sakin bago maglaro</li>
+                <li>Bawal sumama sa iba</li>
+                <li>Sabay dapat kaming tutulog</li>
+                <li>Social Media accounts.</li>
+                <li>Matalino</li>
+                <li>Pwede din bobo</li>
+                <li>Matangkad</li>
+                <li>Payat</li>
+                <li>Umiigting na panga</li>
+                <li>Mabango</li>
+                <li>Hindi maarte</li>
+                <li>Trashtalker</li>
+                <li>Naka iPhone dapat</li>
+                <li>Meron laptop</li>
+                <li>Mayaman</li>
+                <li>Napatol sa bata</li>
+                <li>Singkit</li>
+                <li>Walang anak</li>
+                <li>Mapili sa ulam</li>
+                <li>Bawal makipagfriend sa mga babae o female</li>
+                <li>Bawal lumabas ng bahay</li>
+                <li>Kap ag inaya G agad</li>
+                <li>Taga Pilipinas</li>
+                <li>May kulay yung mata (brown or white)</li>
+                <li>Hindi takot sa commitment</li>
+                <li>Kaya ako buhatin</li>
+                <li>Ket Ano Highest Rank</li>
+                <li>Pero mas maganda pag Legendary</li>
+                <li>Maganda stats</li>
+                <li>Kaya sagutan modules ko</li>
+                <li>May sariling kwarto</li>
+                <li>Malakas dapat wifi nyo</li>
+                <li>Di ako iniiwan</li>
+                <li>Dapat Sophia Taño Abiera pangalan</li>
+            </ul>
+
+            <div class="signature-container">
+                <label for="printed-name">Signature over Printed Name:</label>
+                <input type="text" id="printed-name" placeholder="Your Name" required>
+                <div id="signature-canvas"></div> <!-- Placeholder for p5.js canvas -->
+                <button class="clear-button">Clear Signature</button>
+
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
+    </div>
+    <script src="contract.js"></script>
+    <script src="signature.js"></script>
+</body>
+</html>
